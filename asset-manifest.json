@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/joker/static/css/main.0e3daa8f.chunk.css",
-    "main.js": "/joker/static/js/main.c1353824.chunk.js",
-    "main.js.map": "/joker/static/js/main.c1353824.chunk.js.map",
+    "main.css": "/joker/static/css/main.210cf540.chunk.css",
+    "main.js": "/joker/static/js/main.005514db.chunk.js",
+    "main.js.map": "/joker/static/js/main.005514db.chunk.js.map",
     "runtime-main.js": "/joker/static/js/runtime-main.bb28ab9d.js",
     "runtime-main.js.map": "/joker/static/js/runtime-main.bb28ab9d.js.map",
     "static/js/2.948b07ad.chunk.js": "/joker/static/js/2.948b07ad.chunk.js",
     "static/js/2.948b07ad.chunk.js.map": "/joker/static/js/2.948b07ad.chunk.js.map",
     "index.html": "/joker/index.html",
-    "static/css/main.0e3daa8f.chunk.css.map": "/joker/static/css/main.0e3daa8f.chunk.css.map",
+    "static/css/main.210cf540.chunk.css.map": "/joker/static/css/main.210cf540.chunk.css.map",
     "static/js/2.948b07ad.chunk.js.LICENSE.txt": "/joker/static/js/2.948b07ad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb28ab9d.js",
     "static/js/2.948b07ad.chunk.js",
-    "static/css/main.0e3daa8f.chunk.css",
-    "static/js/main.c1353824.chunk.js"
+    "static/css/main.210cf540.chunk.css",
+    "static/js/main.005514db.chunk.js"
   ]
 }
