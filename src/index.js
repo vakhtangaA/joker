@@ -8,7 +8,6 @@ import {
 
 import "./index.css";
 import App from "./App";
-import { grey } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
   palette: {
@@ -20,7 +19,7 @@ const theme = createMuiTheme({
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <MuiThemeProvider theme={theme}>
         <App />
       </MuiThemeProvider>
