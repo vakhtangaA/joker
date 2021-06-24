@@ -5,36 +5,28 @@ import { Starter } from "./components/Starter";
 import Game from "./components/Game";
 
 const App = () => {
-  const [info, setInfo] = useState({});
+  const [players, setPlayer] = useState({
+    player1: "",
+    player2: "",
+    player3: "",
+    player4: "",
+  });
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  const handlePlayerChange = name => event => {
+    setPlayer({ ...players, [name]: event.target.value });
+  };
 
-    const gameInfo = {};
+  console.log(players);
 
-    for (let key in e.target.elements) {
-      if (key < 8) {
-        const element = e.target.elements[key];
-        if (element.type !== "checkbox") {
-          const name = element.getAttribute("name");
-          gameInfo[name] = element.value;
-        } else if (element.type === "checkbox") {
-          const name = element.getAttribute("name");
-          element.checked ? (gameInfo[name] = true) : (gameInfo[name] = false);
-        }
-      }
-    }
-
-    setInfo(gameInfo);
-    console.log(info);
-  }
   return (
     <div className="app">
       <Switch>
         <Route path="/" exact>
-          <Starter handleSubmit={handleSubmit} name="Vakhtanga" />
+          <Starter handlePlayerChange={handlePlayerChange} />
         </Route>
-        <Route path="/game" component={Game} />
+        <Route path="/game">
+          <Game players={players} />
+        </Route>
       </Switch>
     </div>
   );

@@ -11,18 +11,20 @@ import {
   Switch,
   FormControlLabel,
   Button,
-  FormGroup,
 } from "@material-ui/core";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 import { Player } from "./Player";
 
-export const Starter = props => {
+export const Starter = ({ handlePlayerChange }) => {
   const players = ["|", "||", "|||", "IV"].map((e, i) => (
-    <Player key={i} id={e} name={`player${i + 1}`} />
+    <Player
+      key={i}
+      id={e}
+      name={`player${i + 1}`}
+      handlePlayerChange={handlePlayerChange}
+    />
   ));
-
-  console.log(props.name);
 
   return (
     <Grid
@@ -44,7 +46,7 @@ export const Starter = props => {
         <Typography color="secondary" variant="h3" gutterBottom={true}>
           JOKER
         </Typography>
-        <FormGroup onSubmit={props.handleSubmit}>
+        <form>
           <Box>{players}</Box>
           <FormControl fullWidth margin="normal" color="secondary">
             <InputLabel>აირჩიეთ თამაშის ტიპი</InputLabel>
@@ -73,19 +75,20 @@ export const Starter = props => {
           />
 
           <Grid container justify="center">
-            <Link to="/game">
-              <Button
-                endIcon={<KeyboardArrowRightIcon />}
-                color="secondary"
-                size="large"
-                variant="contained"
-                type="submit"
-              >
-                თამაშის დაწყება
-              </Button>
-            </Link>
+            <Button
+              endIcon={<KeyboardArrowRightIcon />}
+              color="secondary"
+              size="large"
+              variant="contained"
+              type="submit"
+              component={Link}
+              to="/game"
+            >
+              {/* <Link to="/game">თამაშის დაწყება</Link> */}
+              თამაშის დაწყება
+            </Button>
           </Grid>
-        </FormGroup>
+        </form>
       </Grid>
     </Grid>
   );

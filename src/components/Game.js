@@ -1,21 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 import { Button } from "@material-ui/core";
 import { red } from "@material-ui/core/colors";
-import clsx from "clsx";
+import DataGrid from "react-data-grid";
 import { Link } from "react-router-dom";
 
+import clsx from "clsx";
+
 const useStyles = makeStyles({
-  tableContainer: {
-    width: "100% !important",
-  },
   btn: {
     width: "10rem",
   },
@@ -28,49 +20,37 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
+export default function Game({ players }) {
+  const myContainer = useRef(null);
+  const { player1, player2, player3, player4 } = players;
 
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
+  const columns = [
+    { key: "title", name: "#", width: 50 },
+    { key: "player1", name: player1 },
+    { key: "player2", name: player2 },
+    { key: "player3", name: player3 },
+    { key: "player4", name: player4 },
+  ];
 
-export default function BasicTable() {
+  const rows = [
+    { id: 0, title: 0 },
+    { id: 1, title: 1 },
+    { id: 2, title: 2 },
+    { id: 3, title: 3 },
+    { id: 4, title: 4 },
+    { id: 5, title: 5 },
+    { id: 6, title: 6 },
+    { id: 7, title: 7 },
+    { id: 8, title: 8 },
+    { id: 9, title: 9 },
+  ];
+
   const classes = useStyles();
+  // console.log(myContainer);
 
   return (
-    <div className="wrapper">
-      <TableContainer component={Paper} className={classes.table}>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>Dessert (100g serving)</TableCell>
-              <TableCell align="right">Calories</TableCell>
-              <TableCell align="right">Fat&nbsp;(g)</TableCell>
-              <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-              <TableCell align="right">Protein&nbsp;(g)</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map(row => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.calories}</TableCell>
-                <TableCell align="right">{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+    <div id="wrapper">
+      <DataGrid columns={columns} rows={rows} resizable />
       <Link to="/">
         <Button
           className={clsx(classes.stopButton, classes.btn)}

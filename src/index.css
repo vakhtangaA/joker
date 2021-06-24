@@ -9,6 +9,12 @@ body {
   justify-content: space-between;
 }
 
+.MuiFilledInput-input.MuiFilledInput-input {
+  font-size: 1.2rem;
+  color: rgb(63, 58, 16);
+  font-family: revert;
+}
+
 .MuiTable-root {
   background-color: antiquewhite;
   border: "1px solid red !important";
@@ -21,12 +27,13 @@ a {
 @media only screen and (orientation: portrait) {
   .wrapper {
     rotate: 90deg;
+    transition: rotate 1s;
   }
 }
 
 @media only screen and (orientation: landscape) {
   body {
-    /* margin: 0; */
-    /* padding: 0; */
+    margin: 0;
+    padding: 0;
   }
 }
