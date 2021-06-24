@@ -11,7 +11,9 @@ import {
   Switch,
   FormControlLabel,
   Button,
+  FormGroup,
 } from "@material-ui/core";
+import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 import { Player } from "./Player";
 
@@ -19,6 +21,8 @@ export const Starter = props => {
   const players = ["|", "||", "|||", "IV"].map((e, i) => (
     <Player key={i} id={e} name={`player${i + 1}`} />
   ));
+
+  console.log(props.name);
 
   return (
     <Grid container justify="center" alignItems="center">
@@ -30,11 +34,12 @@ export const Starter = props => {
         xs={12}
         sm={8}
         md={6}
+        lg={4}
       >
-        <Typography color="secondary" variant="h3">
+        <Typography color="secondary" variant="h3" gutterBottom={true}>
           JOKER
         </Typography>
-        <form onSubmit={props.handleSubmit}>
+        <FormGroup onSubmit={props.handleSubmit}>
           <Box>{players}</Box>
           <FormControl fullWidth margin="normal" color="secondary">
             <InputLabel>აირჩიეთ თამაშის ტიპი</InputLabel>
@@ -65,6 +70,7 @@ export const Starter = props => {
           <Grid container justify="center">
             <Link to="/game">
               <Button
+                endIcon={<KeyboardArrowRightIcon />}
                 color="secondary"
                 size="large"
                 variant="contained"
@@ -74,7 +80,7 @@ export const Starter = props => {
               </Button>
             </Link>
           </Grid>
-        </form>
+        </FormGroup>
       </Grid>
     </Grid>
   );

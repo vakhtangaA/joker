@@ -1,3 +1,7 @@
+body {
+  background: antiquewhite;
+}
+
 .MuiFormControlLabel-root {
   margin-left: 0 !important;
   width: 100%;

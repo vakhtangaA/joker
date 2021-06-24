@@ -5,7 +5,6 @@ export const Player = props => (
   <TextField
     placeholder={`${props.id} player`}
     type="text"
-    // className="player"
     name={props.name}
     required
     variant="filled"

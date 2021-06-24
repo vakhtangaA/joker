@@ -31,10 +31,11 @@ const App = () => {
   return (
     <div className="app">
       <Switch>
-        <Route path="/" component={Starter} exact />
+        <Route path="/" exact>
+          <Starter handleSubmit={handleSubmit} name="Vakhtanga" />
+        </Route>
         <Route path="/game" component={Game} />
       </Switch>
-      {/* <Starter handleSubmit={handleSubmit} /> */}
     </div>
   );
 };
