@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import { Starter } from "./components/Starter";
-import { Game } from "./components/Game";
+import Game from "./components/Game";
 
 const App = () => {
   const [info, setInfo] = useState({});

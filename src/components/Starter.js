@@ -25,7 +25,12 @@ export const Starter = props => {
   console.log(props.name);
 
   return (
-    <Grid container justify="center" alignItems="center">
+    <Grid
+      container
+      justify="center"
+      alignItems="center"
+      style={{ height: "calc(100vh - 2rem)" }}
+    >
       <Grid
         container
         item
