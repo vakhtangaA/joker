@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/joker/static/css/main.24d059b8.chunk.css",
-    "main.js": "/joker/static/js/main.6eb2afb6.chunk.js",
-    "main.js.map": "/joker/static/js/main.6eb2afb6.chunk.js.map",
+    "main.css": "/joker/static/css/main.4a2344b7.chunk.css",
+    "main.js": "/joker/static/js/main.2b3349cf.chunk.js",
+    "main.js.map": "/joker/static/js/main.2b3349cf.chunk.js.map",
     "runtime-main.js": "/joker/static/js/runtime-main.bb28ab9d.js",
     "runtime-main.js.map": "/joker/static/js/runtime-main.bb28ab9d.js.map",
-    "static/js/2.09057387.chunk.js": "/joker/static/js/2.09057387.chunk.js",
-    "static/js/2.09057387.chunk.js.map": "/joker/static/js/2.09057387.chunk.js.map",
+    "static/js/2.f89ca87b.chunk.js": "/joker/static/js/2.f89ca87b.chunk.js",
+    "static/js/2.f89ca87b.chunk.js.map": "/joker/static/js/2.f89ca87b.chunk.js.map",
     "index.html": "/joker/index.html",
-    "static/css/main.24d059b8.chunk.css.map": "/joker/static/css/main.24d059b8.chunk.css.map",
-    "static/js/2.09057387.chunk.js.LICENSE.txt": "/joker/static/js/2.09057387.chunk.js.LICENSE.txt"
+    "static/css/main.4a2344b7.chunk.css.map": "/joker/static/css/main.4a2344b7.chunk.css.map",
+    "static/js/2.f89ca87b.chunk.js.LICENSE.txt": "/joker/static/js/2.f89ca87b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb28ab9d.js",
-    "static/js/2.09057387.chunk.js",
-    "static/css/main.24d059b8.chunk.css",
-    "static/js/main.6eb2afb6.chunk.js"
+    "static/js/2.f89ca87b.chunk.js",
+    "static/css/main.4a2344b7.chunk.css",
+    "static/js/main.2b3349cf.chunk.js"
   ]
 }
